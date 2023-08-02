@@ -316,7 +316,7 @@ spacing.fixed.px: 12
 
 -- ftd.row:
 if: { front.email != NULL }
-spacing.fixed.px: 16
+spacing.fixed.px: 12
 align-content: center
 
 -- ftd.image:
@@ -332,7 +332,7 @@ role: $inherited.types.fine-print
 
 -- ftd.row:
 if: { front.phone-no != NULL }
-spacing.fixed.px: 16
+spacing.fixed.px: 12
 align-content: center
 
 -- ftd.image:
@@ -348,7 +348,7 @@ role: $inherited.types.fine-print
 
 -- ftd.row:
 if: { front.address != NULL }
-spacing.fixed.px: 16
+spacing.fixed.px: 4
 align-content: center
 
 -- ftd.image:
