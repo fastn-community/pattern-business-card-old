@@ -1,22 +1,23 @@
--- import: fastn-community.github.io/sunset-business-card/docs
--- import: fastn-community.github.io/sunset-business-card
+-- import: fastn-community.github.io/pattern-business-card/docs
+-- import: fastn-community.github.io/pattern-business-card
 -- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
+-- import: fastn-community.github.io/poppins-font/assets as poppins-font-assets
 
 
 
--- site-doc.doc-home: Sunset Business Card
-current-package: fastn-community.github.io/sunset-business-card
+-- site-doc.doc-home: Pattern Business Card
+current-package: fastn-community.github.io/pattern-business-card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
-site-title: Sunset Business Card
+site-title: Pattern Business Card
 
 This guide will demonstrate how to make simple business cards using `fastn`. 
 
 `fastn` is a beginner friendly web-development platform. 
 Check out [`fastn`](https://fastn.com/).
 
--- sunset-business-card.details: John Doe
+-- pattern-business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
@@ -93,7 +94,7 @@ link: integrate/
 
 -- cb.code: Example usage
 
-\-- sunset-business-card.details: John Doe
+\-- pattern-business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
@@ -108,7 +109,7 @@ website: www.johndoe.com
 
 -- string front-sample-code:
 
-\-- import: fastn-community.github.io/sunset-business-card
+\-- import: fastn-community.github.io/pattern-business-card
 
 \-- business-card.front: John Doe
 title: Software Developer
@@ -118,7 +119,7 @@ logo: $assets.files.assets.fastn-logo.svg
 
 -- string back-sample-code:
 
-\-- import: fastn-community.github.io/sunset-business-card
+\-- import: fastn-community.github.io/pattern-business-card
 
 \-- business-card.back: 
 logo: $assets.files.assets.fastn-logo.svg
@@ -283,10 +284,11 @@ optional string website:
 width: fill-container
 overflow: auto
 
--- ftd.row:
+-- ftd.column:
 width.fixed.px: 700
 height.fixed.px: 350
 background.solid: #FFFFFF
+align-content: center
 
 -- ftd.image:
 if: { front.qr-code != NULL }
@@ -298,60 +300,71 @@ right.px: 12
 top.px: 12
 z-index: 2
 
--- ftd.column:
-width.fixed.percent: 40
-height: fill-container
-align-content: center
-spacing.fixed.px: 16
-background.solid: #EF8435
-
 -- ftd.text: $front.name
-role: $inherited.types.heading-medium
-color: #FFFFFF
+role: $poppins-font
+color: #3A5485
 
 -- ftd.text: $front.title
 role: $inherited.types.copy-regular
-color: #FFFFFF
-
--- end: ftd.column
+color: #3A5485
 
 -- ftd.column:
-width.fixed.percent: 60
-height: fill-container
+width: fill-container
 align-content: center
-padding-horizontal.px: 24
-
--- ftd.column:
-width.fixed.percent: 80
-align-content: left
+margin-top.px: 24
 spacing.fixed.px: 12
 
--- ftd.text: $front.email
+-- ftd.row:
 if: { front.email != NULL }
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.image:
+src: $assets.files.assets.email-icon.svg
+width.fixed.px: 16
+height.fixed.px: 16
+
+-- ftd.text: $front.email
 color: #5D6481
 role: $inherited.types.fine-print
-
--- ftd.text: $front.phone-no
-if: { front.phone-no != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-
--- ftd.text: $front.address
-if: { front.address != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-
--- ftd.text: $front.website
-if: { front.address != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-text-align: center
-
--- end: ftd.column
-
--- end: ftd.column
 
 -- end: ftd.row
+
+-- ftd.row:
+if: { front.phone-no != NULL }
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.image:
+src: $assets.files.assets.phone-icon.svg
+width.fixed.px: 16
+height.fixed.px: 16
+
+-- ftd.text: $front.phone-no
+color: #5D6481
+role: $inherited.types.fine-print
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { front.address != NULL }
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.image:
+src: $assets.files.assets.gps-icon.svg
+width.fixed.px: 16
+height.fixed.px: 16
+
+-- ftd.text: $front.address
+color: #5D6481
+role: $inherited.types.fine-print
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -396,17 +409,20 @@ height: fill-container
 align-content: center
 background.image: $bg-image
 
+
+-- ftd.column:
+anchor: parent
+bottom.px: 0
+left.px: 0
+z-index: 999
+padding.px: 44
+background.solid: #FFFFFF
+
 -- ftd.image: $back.logo
 if: { back.logo != NULL }
 max-width.fixed.px: 250
 
--- ftd.text: $back.company-slogan
-if: { back.company-slogan != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
-width: fill-container
-text-align: center
-margin-top.px: 16
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -423,4 +439,18 @@ margin-top.px: 16
 src: $assets.files.assets.bg-back.svg
 repeat: no-repeat
 position: center
+
+
+
+
+
+
+-- ftd.type poppins-type:
+line-height.px: 86
+size.px: 60
+letter-spacing.px: 0
+weight: 600
+font-family: $poppins-font-assets.fonts.Poppins
+
+-- ftd.responsive-type poppins-font: $poppins-type
 

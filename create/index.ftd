@@ -1,13 +1,13 @@
--- import: fastn-community.github.io/sunset-business-card/docs
--- import: fastn-community.github.io/sunset-business-card
+-- import: fastn-community.github.io/pattern-business-card/docs
+-- import: fastn-community.github.io/pattern-business-card
 -- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
 
--- site-doc.doc-home: Create a site with a sunset business card
+-- site-doc.doc-home: Create a site with a Pattern Business Card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
-site-title: Create a site with Sunset Business Card
+site-title: Create a site with Pattern Business Card
 
 
 This step-by-step guide will walk you through the process of building your
@@ -481,7 +481,7 @@ width: fill-container
 height.fixed.px: 700
 
 
-/-- sunset-business-card.details: Ajit Garg
+/-- pattern-business-card.details: Ajit Garg
 company-name: FIfthTry. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
