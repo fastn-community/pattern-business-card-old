@@ -66,7 +66,7 @@ margin-vertical.px: 16
 
 
 -- site-doc.button: Add template
-link: https://github.com/fastn-community/pattern-card-template/generate
+link: https://github.com/new?template_name=pattern-card-template&template_owner=fastn-community
 open-in-new-tab: true
 
 -- end: ftd.column
@@ -381,8 +381,8 @@ margin-vertical.px: 16
 -- tf.h3: `Step 6`: Add logo to your business card
 id: upload-your-logo
 
-As you can see, your live site still has the default logo, so let's personalize
-it with your logo.
+With all the details personalized, now let’s personalize the business card with
+your logo.
 
 First, upload your logo to your repository. It's recommended to keep your logo
 file in one location. In our case, we will use the `assets` folder to store the
@@ -475,21 +475,6 @@ border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
 
-/-- ftd.iframe:
-src: https://gargajit.github.io/business-card/
-width: fill-container
-height.fixed.px: 700
-
-
-/-- pattern-business-card.details: Ajit Garg
-company-name: FIfthTry. Ltd.
-title: Software Developer
-phone-no: +91 12345 99999
-email: john@johndoe.com
-address: 123, Block No. A-123, Times Square, Bangalore - 123456
-logo: $assets.files.assets.ipsum-logo.svg
-company-slogan: If you can type you can code
-website: www.johndoe.com
 
 -- end: ftd.column
 
