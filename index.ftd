@@ -9,7 +9,7 @@
 -- site-doc.doc-home: Pattern Business Card
 current-package: fastn-community.github.io/pattern-business-card
 show-tabs: false
-github-url: https://github.com/fastn-community/business-card
+github-url: https://github.com/fastn-community/pattern-business-card
 site-title: Pattern Business Card
 
 This guide will demonstrate how to make simple business cards using `fastn`. 
